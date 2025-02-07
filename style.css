@@ -1,0 +1,26 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #afbfbf;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  h1 {
+    color: #f50909;
+  }
+  
+  p {
+    color: #161515;
+    
+  }
+  t {
+    color: #0d0d0d;
+  }
+  h3 {
+    color: #f50909;
+  }
+  h4 {
+    color: #afbfbf;
+  }
+  
