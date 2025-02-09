@@ -1,0 +1,27 @@
+/* style3.css */
+
+
+body {
+  background-image: url('F-45644.png'); /* آدرس تصویر پس‌زمینه */
+  background-size: cover; /* تصویر به اندازه صفحه گسترش می‌یابد */
+  background-position: center; /* تصویر در مرکز صفحه قرار می‌گیرد */
+  background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
+  background-attachment: fixed; /* تصویر ثابت باقی می‌ماند هنگامی که صفحه حرکت می‌کند */
+
+  font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+  
+}
+
+  
+  h1 {
+    color: #f50909;
+  }
+  
+  a {
+    color: #ffffff;
+    
+  }
+
+  
