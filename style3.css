@@ -1,27 +1,92 @@
-/* style3.css */
-
-
+/* تنظیمات کلی */
 body {
-  background-image: url('F-45644.png'); /* آدرس تصویر پس‌زمینه */
-  background-size: cover; /* تصویر به اندازه صفحه گسترش می‌یابد */
-  background-position: center; /* تصویر در مرکز صفحه قرار می‌گیرد */
-  background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
-  background-attachment: fixed; /* تصویر ثابت باقی می‌ماند هنگامی که صفحه حرکت می‌کند */
-
-  font-family: Arial, sans-serif;
+    background-image: url('F-45644.png'); /* پس‌زمینه */
+    background-size: cover; /* تصویر به اندازه صفحه گسترش می‌یابد */
+    background-position: center; /* تصویر در مرکز قرار می‌گیرد */
+    background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
+    background-attachment: fixed; /* تصویر ثابت باقی می‌ماند */
+    font-family: Arial, sans-serif;
     text-align: center;
-    padding: 50px;
-  
+    margin: 0;
+    padding: 0;
 }
 
-  
-  h1 {
-    color: #f50909;
-  }
-  
-  a {
-    color: #ffffff;
-    
-  }
+/* منوی ناوبری */
+nav {
+    background-color: #212223;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
 
-  
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* تصویر واکنش‌گرا */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* متن اصلی */
+h1 {
+    font-size: 2.5rem;
+    color: #f50909;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    nav .nav-links li a {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo {
+        font-size: 1.2rem;
+    }
+
+    nav .nav-links li a {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
