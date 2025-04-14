@@ -1,10 +1,11 @@
 /* تنظیمات کلی */
 body {
-    background-image: url('F-45644.png'); /* پس‌زمینه */
+    background-image: url('F-45644.png'); /* آدرس تصویر پس‌زمینه */
     background-size: cover; /* تصویر به اندازه صفحه گسترش می‌یابد */
-    background-position: center; /* تصویر در مرکز قرار می‌گیرد */
+    background-position: center; /* تصویر در مرکز صفحه قرار می‌گیرد */
     background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
-    background-attachment: fixed; /* تصویر ثابت باقی می‌ماند */
+    background-attachment: fixed; /* تصویر ثابت باقی می‌ماند هنگامی که صفحه حرکت می‌کند */
+
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -12,99 +13,68 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* ارتفاع حداقلی صفحه */
+    min-height: 100vh; /* ارتفاع حداقلی برای صفحه */
+    text-align: center;
+    color: #ffffff; /* رنگ متن سفید */
 }
 
-/* منوی ناوبری */
+/* نوار ناوبری */
 nav {
     background-color: #212223;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
     width: 100%;
-}
-
-nav .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav .nav-links {
-    list-style: none;
+    padding: 10px 20px;
     display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-nav .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-}
-
-/* محتوای اصلی */
-.content {
-    display: flex;
-    flex-direction: column;
+    justify-content: center; /* محتوای نوار ناوبری در مرکز قرار می‌گیرد */
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 20px; /* فاصله بین تصویر و متن */
 }
 
-/* تصویر واکنش‌گرا */
-.responsive-image {
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 15px;
+}
+
+/* تصویر وسط صفحه */
+.centered-image {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-/* متن اصلی */
+/* عنوان و متن */
 h1 {
     font-size: 2.5rem;
     color: #f50909;
-    margin: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ffffff;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-
-    nav .nav-links li a {
-        font-size: 1.2rem;
-    }
-
     h1 {
         font-size: 2rem;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 480px) {
-    nav .logo {
-        font-size: 1.2rem;
-    }
-
-    nav .nav-links li a {
-        font-size: 1rem;
-    }
-
     h1 {
         font-size: 1.8rem;
     }
 
-    .responsive-image {
-        max-width: 80%; /* تصویر کوچک‌تر شود */
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .centered-image {
+        width: 80%; /* عرض تصویر در گوشی‌ها کوچک‌تر می‌شود */
     }
 }
