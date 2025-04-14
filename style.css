@@ -56,6 +56,10 @@ nav ul li a {
     gap: 20px;
 }
 
+.image-item {
+    width: 45%; /* هر عکس 45% از عرض صفحه را اشغال می‌کند */
+}
+
 .image-item img {
     max-width: 100%;
     height: auto;
@@ -85,7 +89,7 @@ nav ul li a {
     }
 
     .image-item {
-        width: 45%;
+        width: 100%; /* در صفحات کوچک‌تر، هر عکس تمام عرض را اشغال می‌کند */
     }
 }
 
@@ -96,9 +100,5 @@ nav ul li a {
 
     nav ul li a {
         font-size: 1rem;
-    }
-
-    .image-item {
-        width: 100%;
     }
 }
