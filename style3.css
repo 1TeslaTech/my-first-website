@@ -7,74 +7,71 @@ body {
     background-attachment: fixed; /* تصویر ثابت باقی می‌ماند هنگامی که صفحه حرکت می‌کند */
 
     font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* ارتفاع حداقلی برای صفحه */
+    justify-content: center; /* محتوا به مرکز صفحه منتقل می‌شود */
+    align-items: center; /* محتوا به مرکز عمودی صفحه منتقل می‌شود */
+    min-height: 100vh; /* حداقل ارتفاع صفحه */
+}
+
+.content {
     text-align: center;
-    color: #ffffff; /* رنگ متن سفید */
+    max-width: 90%; /* حداکثر عرض محتوا */
+    margin: 0 auto; /* محتوا به مرکز صفحه منتقل می‌شود */
 }
 
-/* نوار ناوبری */
-nav {
-    background-color: #212223;
-    width: 100%;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center; /* محتوای نوار ناوبری در مرکز قرار می‌گیرد */
-    align-items: center;
+.center-image {
+    max-width: 100%; /* تصویر به عرض کامل کانتینر تنظیم می‌شود */
+    height: auto; /* ارتفاع تصویر به‌صورت خودکار تنظیم می‌شود */
+    border-radius: 10px; /* گوشه‌های تصویر گرد شود */
+    margin-bottom: 20px; /* فاصله بین تصویر و متن */
 }
 
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin: 0 15px;
-}
-
-/* تصویر وسط صفحه */
-.centered-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-/* عنوان و متن */
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* اندازه فونت برای عنوان */
     color: #f50909;
+    margin-bottom: 20px; /* فاصله بین عنوان و لینک‌ها */
 }
 
-p {
-    font-size: 1.2rem;
-    color: #ffffff;
+nav ul {
+    list-style: none; /* حذف bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* لینک‌ها به مرکز صفحه منتقل می‌شوند */
+    gap: 20px; /* فاصله بین لینک‌ها */
+}
+
+nav ul li a {
+    text-decoration: none; /* حذف زیرخط لینک‌ها */
+    font-size: 1.5rem; /* اندازه فونت برای لینک‌ها */
+    color: #ffffff; /* رنگ متن لینک‌ها */
+    transition: color 0.3s ease; /* افزودن افکت hover */
+}
+
+nav ul li a:hover {
+    color: #f50909; /* تغییر رنگ لینک‌ها در حالت hover */
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* کاهش اندازه عنوان در صفحات کوچک‌تر */
     }
 
-    .nav-links a {
-        font-size: 1.2rem;
+    nav ul li a {
+        font-size: 1.2rem; /* کاهش اندازه لینک‌ها در صفحات کوچک‌تر */
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* کاهش بیشتر اندازه عنوان در گوشی‌ها */
     }
 
-    .nav-links a {
-        font-size: 1rem;
-    }
-
-    .centered-image {
-        width: 80%; /* عرض تصویر در گوشی‌ها کوچک‌تر می‌شود */
+    nav ul li a {
+        font-size: 1rem; /* کاهش بیشتر اندازه لینک‌ها در گوشی‌ها */
     }
 }
