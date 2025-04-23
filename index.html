@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>وبسایت تسلا الکترونیک</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- تصویر اصلی و متن خوش‌آمدگویی -->
-    <header>
-        <img src="cute-photos04-8.jpg" alt="تصویر مورد نظر" class="header-image">
-        <h1>!خوش آمدید</h1>
-        <p>این یک وبسایت ساده است که توسط خودم ساخته شده</p>
-        <p class="author"> >_< سید علی احمدی </p>
-          <script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="ROtzAHIzqfqkhoQNPP0pd";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-          </script>  
-    </header>
-
-    <!-- لینک‌ها -->
     <nav>
+        <div class="logo">تسلا الکترونیک</div>
         <ul>
             <li><a href="music.html">آهنگ</a></li>
             <li><a href="Wallpaper.html">والپیپر</a></li>
         </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
     </nav>
 
-    <!-- گالری تصاویر -->
+    <header>
+        <img src="cute-photos04-8.jpg" alt="تصویر هدر" class="header-image">
+        <h1>به وبسایت من خوش اومدید!</h1>
+        <p>این یه وبسایت ساده که توسط من ساخته‌شده </p>
+        <p class="author">سید علی احمدی >_<</p>
+    </header>
+
     <main>
         <section class="gallery">
             <div class="image-item">
-                <img src="1737568712808.jpeg" alt="تصویر">
+                <img src="1737568712808.jpeg" alt="تصویر 1">
                 <p>عکس 1</p>
             </div>
             <div class="image-item">
-                <img src="1707906742278.jpg" alt="تصویر">
+                <img src="1707906742278.jpg" alt="تصویر 2">
                 <p>عکس 2</p>
             </div>
             <div class="image-item">
-                <img src="1707906742268.jpeg" alt="تصویر">
+                <img src="1707906742268.jpeg" alt="تصویر 3">
                 <p>عکس 3</p>
             </div>
             <div class="image-item">
-                <img src="bj5655666.png" alt="تصویر">
+                <img src="bj5655666.png" alt="تصویر 4">
                 <p>عکس 4</p>
             </div>
             <div class="image-item">
-                <img src="44546454845hgfyc.png" alt="تصویر">
+                <img src="44546454845hgfyc.png" alt="تصویر 5">
                 <p>عکس 5</p>
             </div>
             <div class="image-item">
-                <img src="54645154554411.jpg" alt="تصویر">
+                <img src="54645154554411.jpg" alt="تصویر 6">
                 <p>عکس 6</p>
             </div>
             <div class="image-item">
-                <img src="1707906742236.jpeg" alt="تصویر">
+                <img src="1707906742236.jpeg" alt="تصویر 7">
                 <p>عکس 7</p>
             </div>
         </section>
     </main>
 
-    <!-- تصویر پاورقی -->
     <footer>
-        <img src="5544614545411.gif" alt="تصویر پاورقی" class="footer-image">
+        <img src="5544614545411.gif" alt="تصویر فوتر" class="footer-image">
+        <div class="social-links">
+            <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>طراحی‌شده توسط سید علی احمدی &copy; 2025</p>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
